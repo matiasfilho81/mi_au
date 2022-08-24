@@ -16,21 +16,50 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.amber,
-          ),
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.redAccent,
-          ),
-        ],
+      body: Container(
+        color: Colors.black,
+        child: coluna(),
       ),
+    );
+  }
+
+  Column coluna() {
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          linha(Colors.red, Colors.amber, Colors.green),
+          linha(Colors.amber, Colors.red, Colors.purple),
+          linha(Colors.red, Colors.pink, Colors.green),
+
+        ],
+      );
+  }
+
+  Widget linha(MaterialColor a, MaterialColor b, MaterialColor c) {
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        face(a, 100, 100),
+        face(b, 100, 100),
+        face(c, 100, 100),
+      ],
+    );
+  }
+
+  Widget face(
+    MaterialColor cor,
+    double widthCotainer,
+    double heightCotainer,
+  ) {
+    return Container(
+      margin: const EdgeInsets.all(4.0),
+      width: widthCotainer,
+      height: heightCotainer,
+      color: cor,
     );
   }
 }
