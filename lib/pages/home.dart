@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mi_au/utils/app_responsive/app_responsive_ext.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -56,9 +57,9 @@ class _MyHomePageState extends State<MyHomePage> {
     double heightCotainer,
   ) {
     return Container(
-      margin: const EdgeInsets.all(4.0),
-      width: widthCotainer,
-      height: heightCotainer,
+      margin: EdgeInsets.all(4.0.wsp),
+      width: widthCotainer.wsp,
+      height: heightCotainer.hsp,
       color: cor,
     );
   }
