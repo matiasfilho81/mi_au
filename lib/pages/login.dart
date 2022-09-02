@@ -1,3 +1,4 @@
+//teste
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -45,15 +46,19 @@ class LoginPage extends StatelessWidget {
             ),
             Container(
               height: 40,
-              alignment: Alignment.centerRight,
-              child: const TextButton(
+              alignment: Alignment.centerLeft,
+
+              child: const ElevatedButton(
                 child: Text (
                    "Você é novo? Cadastre-se",
                
                 ),
+                onPressed: () {},
                 
                ),
+
             ),
+            SizedBox()
         ],
       ),
       ),
