@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 
+import '../core/themes/app_colors.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    return body();
+  }
+
+  Scaffold body() {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.only(
-          top: 60,
-          left: 40,
-           right: 40,
-           ),
-        color: Colors.amber,
+        // padding: EdgeInsets.only(top: 60.hsp, left: 40.wsp, right: 40.wsp),
+        padding: const EdgeInsets.only(top: 60, left: 40, right: 40),
+        color: AppColors.primaria,
         child: ListView(
           children: <Widget>[
             SizedBox(
@@ -35,9 +38,9 @@ class LoginPage extends StatelessWidget {
               ),
               style: const TextStyle(
                 fontSize: 20,
-                ),
+              ),
             ),
-             const SizedBox(
+            const SizedBox(
               height: 10,
             ),
             TextFormField(
@@ -47,7 +50,7 @@ class LoginPage extends StatelessWidget {
               decoration: const InputDecoration(
                 labelText: "Senha",
                 labelStyle: TextStyle(
-                  color: Colors.black38,
+                  color: Colors.black38, // TODO: usar a classe de cores
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
@@ -57,11 +60,14 @@ class LoginPage extends StatelessWidget {
             Container(
               height: 40,
               alignment: Alignment.centerLeft,
-              child:  ElevatedButton(
+              child: ElevatedButton(
                 child: const Text(
-                  "Você é novo? Cadastre-se",                  
+                  "Você é novo? Cadastre-se",
                 ),
-                onPressed:() {},
+                onPressed: () {
+                      debugPrint("apertei");
+                     // TODO: navegar pra a pagina de cadastro
+                },
               ),
             ),
             const SizedBox(
@@ -76,39 +82,40 @@ class LoginPage extends StatelessWidget {
                   end: Alignment.bottomRight,
                   stops: [0.3, 1],
                   colors: [
-                    Color.fromARGB(255, 109, 36, 245),
-                     Color.fromARGB(255, 5, 78, 25),
+                    Color.fromARGB(255, 109, 36, 245), // TODO: usar a classe de cores
+                    Color.fromARGB(255, 5, 78, 25), // TODO: usar a classe de cores
                   ],
                 ),
                 borderRadius: BorderRadius.all(
                   Radius.circular(5),
-                  ),
+                ),
               ),
               child: SizedBox.expand(
-                child:  ElevatedButton(
+                child: ElevatedButton(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const <Widget>[
                       Text(
                         "Entrar",
-                        style:  TextStyle(
+                        style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                           fontSize: 20,
                         ),
                         textAlign: TextAlign.center,
-                        ),
-                      
+                      ),
                     ],
                   ),
-                  onPressed: () => {},
-                   ),
+                  onPressed: () => {
+                    debugPrint("apertei")
+                     // TODO: navegar pra a pagina de home
+                  },
+                ),
               ),
             )
-            ],
+          ],
         ),
       ),
     );
-    
   }
 }
