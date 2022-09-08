@@ -62,10 +62,34 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_localizations",
+      "rootUri": "file:///Users/matiasfilho/development/flutter/packages/flutter_localizations",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_modular",
+      "rootUri": "file:///Users/matiasfilho/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_modular-5.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_modular_annotations",
+      "rootUri": "file:///Users/matiasfilho/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_modular_annotations-0.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/matiasfilho/development/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/matiasfilho/development/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "lints",
@@ -92,8 +116,26 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "modular_core",
+      "rootUri": "file:///Users/matiasfilho/development/flutter/.pub-cache/hosted/pub.dartlang.org/modular_core-2.0.3+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "modular_interfaces",
+      "rootUri": "file:///Users/matiasfilho/development/flutter/.pub-cache/hosted/pub.dartlang.org/modular_interfaces-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/matiasfilho/development/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shimmer",
+      "rootUri": "file:///Users/matiasfilho/development/flutter/.pub-cache/hosted/pub.dartlang.org/shimmer-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -152,7 +194,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-09-06T11:31:25.321568Z",
+  "generated": "2022-09-08T23:21:26.488401Z",
   "generator": "pub",
   "generatorVersion": "2.17.6"
 }
