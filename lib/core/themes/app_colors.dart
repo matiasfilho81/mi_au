@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 class AppColors {
   AppColors();
 
+
+  static const Color primaria = Colors.amber;
+
   //Neutrals
   static const Color colorNeutral_900 = Color(0xFF1B1E25);
   static const Color colorNeutral_800 = Color(0xFF4C4E58);
