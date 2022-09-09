@@ -13,16 +13,17 @@ class RouteGenerator {
       case 'Menu':
         //return MaterialPageRoute(builder: (_) => MenuPage());
       case 'Home':
-        return MaterialPageRoute(builder: (_) => MyHomePage(title: '',));
+        return MaterialPageRoute(builder: (_) => const MyHomePage(title: '',));
 
       default: _erroRoute();
     }
+    return null;
   }
   static Route<dynamic> _erroRoute() {
     return MaterialPageRoute(builder: (_){
       return Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('Erro')),
+          title: const Center(child: Text('Erro')),
         ),
       );
     });
