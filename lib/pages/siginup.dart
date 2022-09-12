@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  // ignore: prefer_const_constructors
-  runApp(MaterialApp(
-    home: const TelaCadastro(),
-  ));
-}
+import '../core/themes/ui/buttons/button_icon.dart';
+
+// void main() {
+//   // ignore: prefer_const_constructors
+//   runApp(MaterialApp(
+//     home: const TelaCadastro(),
+//   ));
+// }
 
 class TelaCadastro extends StatefulWidget {
   const TelaCadastro({Key? key}) : super(key: key);
@@ -15,6 +17,8 @@ class TelaCadastro extends StatefulWidget {
 }
 
 class _TelaCadastroState extends State<TelaCadastro> {
+  bool aceitotermos = false;
+  bool leitor = false;
   @override
   Widget build(BuildContext context) {
     var appBar2 = AppBar(
@@ -110,7 +114,37 @@ class _TelaCadastroState extends State<TelaCadastro> {
               ),
             ),
           ),
-          ElevatedButton(onPressed: () {}, child: const Text('Enviar'))
+          Row(
+            children: [
+              Checkbox(
+                value: aceitotermos,
+                onChanged: (checked) {
+                  setState(() {
+                    aceitotermos = !aceitotermos;
+                  });
+                },
+              ),
+              const Text(
+                  'Li e concordo com os Termos de uso e com as Política de privacidade'),
+            ],
+          ),
+          Row(
+            children: [
+              Checkbox(
+                value: leitor,
+                onChanged: (checked) {
+                  setState(() {
+                    leitor = !leitor;
+                  });
+                },
+              ),
+              const Text('Leitor Digital'),
+            ],
+          ),
+          Button(
+            label: "Entrar",
+            onPressed: () => debugPrint("Olá sou um botao e faço uma ação!"),
+          ),
         ],
       ),
     );
