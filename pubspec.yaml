@@ -12,6 +12,7 @@ dependencies:
   flutter_modular: ^5.0.2
   shimmer: ^2.0.0
   cupertino_icons: ^1.0.2
+  url_launcher: ^6.1.5
 
 dev_dependencies:
   flutter_test:
