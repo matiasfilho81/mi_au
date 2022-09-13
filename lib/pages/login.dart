@@ -27,6 +27,27 @@ class LoginPage extends StatelessWidget {
                 ),
                 color: AppColors.primary),
             height: 300.hsp,
+            child: ListView(
+              children: <Widget>[
+                const Text(
+                  'Olá, Bem-vindo?',
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.secondary,
+                    height: 2,
+                    
+                    fontSize: 22,
+                  ),
+                ),
+                SizedBox(
+                  width: 160.wsp,
+                  height: 143.hsp,
+                  child: Image.asset("assets/images/logo.png"),
+                ),
+              ],
+            ),
           ),
           Button(
             label: "Entrar",
