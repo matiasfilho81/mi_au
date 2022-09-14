@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../core/themes/ui/buttons/button_icon.dart';
-
-// void main() {
-//   // ignore: prefer_const_constructors
-//   runApp(MaterialApp(
-//     home: const TelaCadastro(),
-//   ));
-// }
 
 class TelaCadastro extends StatefulWidget {
   const TelaCadastro({Key? key}) : super(key: key);
@@ -19,6 +11,12 @@ class TelaCadastro extends StatefulWidget {
 class _TelaCadastroState extends State<TelaCadastro> {
   bool aceitotermos = false;
   bool leitor = false;
+  String dropdownvalue = 'Genero';
+  var items = [
+    'Masculino',
+    'Feminino',
+  ];
+
   @override
   Widget build(BuildContext context) {
     var appBar2 = AppBar(
@@ -64,6 +62,28 @@ class _TelaCadastroState extends State<TelaCadastro> {
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: Color(0xFF6200EE)),
               ),
+            ),
+          ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                DropdownButton(
+                  value: dropdownvalue,
+                  icon: const Icon(Icons.keyboard_arrow_down),
+                  items: items.map((String items) {
+                    return DropdownMenuItem(
+                      value: items,
+                      child: Text(items),
+                    );
+                  }).toList(),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      dropdownvalue = newValue!;
+                    });
+                  },
+                ),
+              ],
             ),
           ),
           TextFormField(
