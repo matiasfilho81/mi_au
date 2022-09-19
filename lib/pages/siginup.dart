@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import '../core/themes/ui/buttons/button_icon.dart';
 
@@ -10,7 +12,7 @@ class TelaCadastro extends StatefulWidget {
 
 class _TelaCadastroState extends State<TelaCadastro> {
   bool aceitotermos = false;
-  bool leitor = false;
+  bool leitor = true;
   String dropdownvalue = 'Genero';
   var items = [
     'Masculino',
@@ -64,28 +66,27 @@ class _TelaCadastroState extends State<TelaCadastro> {
               ),
             ),
           ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                DropdownButton(
-                  value: dropdownvalue,
-                  icon: const Icon(Icons.keyboard_arrow_down),
-                  items: items.map((String items) {
-                    return DropdownMenuItem(
-                      value: items,
-                      child: Text(items),
-                    );
-                  }).toList(),
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      dropdownvalue = newValue!;
-                    });
-                  },
-                ),
-              ],
-            ),
-          ),
+          // Center(
+          //   child: Row(
+          //     children: [
+          //       DropdownButton(
+          //         value: dropdownvalue,
+          //         icon: const Icon(Icons.keyboard_arrow_down),
+          //         items: items.map((String items) {
+          //           return DropdownMenuItem(
+          //             value: items,
+          //             child: Text(items),
+          //           );
+          //         }).toList(),
+          //         onChanged: (String? newValue) {
+          //           setState(() {
+          //             dropdownvalue = newValue!;
+          //           });
+          //         },
+          //       ),
+          //     ],
+          //   ),
+          // ),
           TextFormField(
             initialValue: 'E-mail',
             decoration: const InputDecoration(
@@ -145,20 +146,36 @@ class _TelaCadastroState extends State<TelaCadastro> {
                 },
               ),
               const Text(
-                  'Li e concordo com os Termos de uso e com as Política de privacidade'),
+                'Li e concordo com os Termos de uso e com as',
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              const Text(
+                'Política de privacidade',
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              )
             ],
           ),
           Row(
             children: [
-              Checkbox(
+              Switch(
                 value: leitor,
-                onChanged: (checked) {
+                onChanged: (bool s) {
                   setState(() {
-                    leitor = !leitor;
+                    leitor = s;
+                    print(leitor);
                   });
                 },
               ),
-              const Text('Leitor Digital'),
+              const Text(
+                'Leitor Digital',
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              )
             ],
           ),
           Button(
