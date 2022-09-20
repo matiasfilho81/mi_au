@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:mi_au/pages/whatsapp.dart';
 
-import 'pages/login.dart';
 import 'utils/app_responsive/app_responsive_widget.dart';
 
 void main() {
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       builder: (context, child) {
-        return const AppResponsiveWidget(child: LoginPage());
+        return const AppResponsiveWidget(child: WhatsAppButton());
       },
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
