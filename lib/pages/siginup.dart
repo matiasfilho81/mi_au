@@ -22,167 +22,242 @@ class _TelaCadastroState extends State<TelaCadastro> {
   @override
   Widget build(BuildContext context) {
     var appBar2 = AppBar(
-      title: const Text("Cadastro", style: TextStyle(fontSize: 30.0)),
+      title: const Center(
+          child: Text("Cadastro", style: TextStyle(fontSize: 30.0))),
       backgroundColor: const Color.fromARGB(255, 245, 198, 71),
     );
     return Scaffold(
       appBar: appBar2,
-      body: Column(
-        // ignore: prefer_const_literals_to_create_immutables
-        children: <Widget>[
-          TextFormField(
-            initialValue: 'Nome',
-            decoration: const InputDecoration(
-              icon: Icon(Icons.person),
-              labelStyle: TextStyle(
-                color: Color(0xFF6200EE),
-              ),
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE)),
-              ),
-            ),
-          ),
-          TextFormField(
-            initialValue: 'Sobrenome',
-            decoration: const InputDecoration(
-              icon: Icon(Icons.person),
-              labelStyle: TextStyle(
-                color: Color(0xFF6200EE),
-              ),
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE)),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: <Widget>[
+            TextFormField(
+              initialValue: 'Nome',
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.person),
+                labelStyle: TextStyle(
+                  color: Color(0xFF6200EE),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 3, color: Color(0xFF6200EE)),
+                ),
               ),
             ),
-          ),
-          TextFormField(
-            initialValue: 'CPF',
-            decoration: const InputDecoration(
-              icon: Icon(Icons.person),
-              labelStyle: TextStyle(
-                color: Color(0xFF6200EE),
-              ),
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE)),
-              ),
-            ),
-          ),
-          // Center(
-          //   child: Row(
-          //     children: [
-          //       DropdownButton(
-          //         value: dropdownvalue,
-          //         icon: const Icon(Icons.keyboard_arrow_down),
-          //         items: items.map((String items) {
-          //           return DropdownMenuItem(
-          //             value: items,
-          //             child: Text(items),
-          //           );
-          //         }).toList(),
-          //         onChanged: (String? newValue) {
-          //           setState(() {
-          //             dropdownvalue = newValue!;
-          //           });
-          //         },
-          //       ),
-          //     ],
-          //   ),
-          // ),
-          TextFormField(
-            initialValue: 'E-mail',
-            decoration: const InputDecoration(
-              icon: Icon(Icons.email),
-              labelStyle: TextStyle(
-                color: Color(0xFF6200EE),
-              ),
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE)),
+            TextFormField(
+              initialValue: 'Sobrenome',
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.person),
+                labelStyle: TextStyle(
+                  color: Color(0xFF6200EE),
+                ),
+                enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 3, color: Color(0xFF6200EE))),
               ),
             ),
-          ),
-          TextFormField(
-            initialValue: 'Cidade',
-            decoration: const InputDecoration(
-              icon: Icon(Icons.location_on),
-              labelStyle: TextStyle(
-                color: Color(0xFF6200EE),
-              ),
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE)),
+            Row(
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: TextFormField(
+                    initialValue: 'CPF',
+                    decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.person),
+                      labelStyle: TextStyle(
+                        color: Color(0xFF6200EE),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(width: 3, color: Color(0xFF6200EE))),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: TextFormField(
+                    initialValue: 'Genero',
+                    decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.person),
+                      labelStyle: TextStyle(
+                        color: Color(0xFF6200EE),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            TextFormField(
+              initialValue: 'E-mail',
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.email),
+                labelStyle: TextStyle(
+                  color: Color(0xFF6200EE),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 3, color: Color(0xFF6200EE)),
+                ),
               ),
             ),
-          ),
-          TextFormField(
-            initialValue: 'Senha',
-            decoration: const InputDecoration(
-              icon: Icon(Icons.lock),
-              labelStyle: TextStyle(
-                color: Color(0xFF6200EE),
-              ),
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE)),
-              ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: TextFormField(
+                    initialValue: 'Cidade',
+                    decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.location_on),
+                      labelStyle: TextStyle(
+                        color: Color(0xFF6200EE),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 3,
+                  child: TextFormField(
+                    initialValue: 'UF',
+                    decoration: const InputDecoration(
+                      labelStyle: TextStyle(
+                        color: Color(0xFF6200EE),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ),
-          TextFormField(
-            initialValue: 'Telefone',
-            decoration: const InputDecoration(
-              icon: Icon(Icons.phone),
-              labelStyle: TextStyle(
-                color: Color(0xFF6200EE),
-              ),
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE)),
-              ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: TextFormField(
+                    initialValue: 'Senha',
+                    decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.lock),
+                      labelStyle: TextStyle(
+                        color: Color(0xFF6200EE),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 3,
+                  child: TextFormField(
+                    initialValue: 'Confirmar Senha',
+                    decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.lock),
+                      labelStyle: TextStyle(
+                        color: Color(0xFF6200EE),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ),
-          Row(
-            children: [
-              Checkbox(
-                value: aceitotermos,
-                onChanged: (checked) {
-                  setState(() {
-                    aceitotermos = !aceitotermos;
-                  });
-                },
-              ),
-              const Text(
-                'Li e concordo com os Termos de uso e com as',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              const Text(
-                'Política de privacidade',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
-          Row(
-            children: [
-              Switch(
-                value: leitor,
-                onChanged: (bool s) {
-                  setState(() {
-                    leitor = s;
-                    print(leitor);
-                  });
-                },
-              ),
-              const Text(
-                'Leitor Digital',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
-          Button(
-            label: "Entrar",
-            onPressed: () => debugPrint("Olá sou um botao e faço uma ação!"),
-          ),
-        ],
+            Row(
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: TextFormField(
+                    initialValue: 'Telefone',
+                    decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.phone),
+                      labelStyle: TextStyle(
+                        color: Color(0xFF6200EE),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 3,
+                  child: TextFormField(
+                    initialValue: 'Celular',
+                    decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.phone_android),
+                      labelStyle: TextStyle(
+                        color: Color(0xFF6200EE),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Checkbox(
+                  value: aceitotermos,
+                  onChanged: (checked) {
+                    setState(() {
+                      aceitotermos = !aceitotermos;
+                    });
+                  },
+                ),
+                const Text(
+                  'Li e concordo com os Termos de uso e com as',
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            const Text(
+              'Política de privacidade',
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Row(
+              children: [
+                Switch(
+                  value: leitor,
+                  onChanged: (bool s) {
+                    setState(() {
+                      leitor = s;
+                      print(leitor);
+                    });
+                  },
+                ),
+                const Text(
+                  'Leitor Digital',
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+            Button(
+              label: "Entrar",
+              onPressed: () => debugPrint("Olá sou um botao e faço uma ação!"),
+            ),
+          ],
+        ),
       ),
     );
   }
