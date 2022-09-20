@@ -27,7 +27,7 @@ class _WhatsAppButtonState extends State<WhatsAppButton> {
   // ignore: non_constant_identifier_names
   OpenWhatsapp() async {
     var whatsapp = "+5511943043779";
-    var whatsappURL_android = "whatsapp://send?phone="+whatsapp+"&text=Ola";
+    var whatsappURLAndroid = "whatsapp://send?phone=$whatsapp&text=Ola";
     var whatsappURLIos = "http:/wa.me/$whatsapp?text=${Uri.parse('Ola')}";
     if (Platform.isIOS) {
       // ignore: deprecated_member_use
@@ -35,9 +35,9 @@ class _WhatsAppButtonState extends State<WhatsAppButton> {
         // ignore: deprecated_member_use
         await launch(whatsappURLIos);
     }else {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("whatsapp not installed")));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("whatsapp not installed")));
       // ignore: deprecated_member_use
-      if (await canLaunch(whatsappURL_android)) {
+      if (await canLaunch(whatsappURLAndroid)) {
         // ignore: deprecated_member_use
         await launch(whatsappURLIos);
     }
