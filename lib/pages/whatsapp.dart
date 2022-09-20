@@ -27,7 +27,6 @@ import 'package:url_launcher/url_launcher.dart';
 //   }
 // }
 
-
 //Método 2:
 
 class WhatsAppButton extends StatefulWidget {
@@ -42,15 +41,16 @@ class _WhatsAppButtonState extends State<WhatsAppButton> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: IconButton(icon:
-        const Icon(Icons.whatsapp),
-        onPressed: (){
-          OpenWhatsapp();
-        },
-         ),
+        child: IconButton(
+          icon: const Icon(Icons.whatsapp),
+          onPressed: () {
+            OpenWhatsapp();
+          },
         ),
-      );
+      ),
+    );
   }
+
   // ignore: non_constant_identifier_names
   OpenWhatsapp() async {
     var whatsapp = "+5511943043779";
@@ -61,15 +61,17 @@ class _WhatsAppButtonState extends State<WhatsAppButton> {
       if (await canLaunch(whatsappURLIos)) {
         // ignore: deprecated_member_use
         await launch(whatsappURLIos);
-    }else {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("whatsapp not installed")));
-      // ignore: deprecated_member_use
-      if (await canLaunch(whatsappURLAndroid)) {
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text("whatsapp not installed")));
         // ignore: deprecated_member_use
-        await launch(whatsappURLIos);
+        if (await canLaunch(whatsappURLAndroid)) {
+          // ignore: deprecated_member_use
+          await launch(whatsappURLIos);
+        }
+      }
     }
+  }
+}
 
-}
-}
-}
-}
+
