@@ -32,141 +32,127 @@ class _TelaCadastroState extends State<TelaCadastro> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
-            TextFormField(
-              initialValue: 'Nome',
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.person),
-                labelStyle: TextStyle(
-                  color: Color(0xFF6200EE),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: Color(0xFF6200EE)),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                initialValue: 'Nome',
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.person),
+                  labelStyle: TextStyle(
+                    color: Color(0xFF6200EE),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 3, color: Color(0xFF6200EE)),
+                  ),
                 ),
               ),
             ),
-            TextFormField(
-              initialValue: 'Sobrenome',
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.person),
-                labelStyle: TextStyle(
-                  color: Color(0xFF6200EE),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                initialValue: 'Sobrenome',
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.person),
+                  labelStyle: TextStyle(
+                    color: Color(0xFF6200EE),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide:
+                          BorderSide(width: 3, color: Color(0xFF6200EE))),
                 ),
-                enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(width: 3, color: Color(0xFF6200EE))),
               ),
             ),
             Row(
               children: [
                 Expanded(
-                  flex: 3,
-                  child: TextFormField(
-                    initialValue: 'CPF',
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.person),
-                      labelStyle: TextStyle(
-                        color: Color(0xFF6200EE),
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      initialValue: 'CPF',
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Icons.person),
+                        labelStyle: TextStyle(
+                          color: Color(0xFF6200EE),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(width: 3, color: Color(0xFF6200EE))),
                       ),
-                      enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 3, color: Color(0xFF6200EE))),
                     ),
                   ),
                 ),
                 Expanded(
                   flex: 2,
-                  child: TextFormField(
-                    initialValue: 'Genero',
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.person),
-                      labelStyle: TextStyle(
-                        color: Color(0xFF6200EE),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      initialValue: 'Genero',
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Icons.person),
+                        labelStyle: TextStyle(
+                          color: Color(0xFF6200EE),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                        ),
                       ),
                     ),
                   ),
                 ),
               ],
             ),
-            TextFormField(
-              initialValue: 'E-mail',
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.email),
-                labelStyle: TextStyle(
-                  color: Color(0xFF6200EE),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: Color(0xFF6200EE)),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                initialValue: 'E-mail',
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.email),
+                  labelStyle: TextStyle(
+                    color: Color(0xFF6200EE),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 3, color: Color(0xFF6200EE)),
+                  ),
                 ),
               ),
             ),
             Row(
               children: [
                 Expanded(
-                  flex: 3,
-                  child: TextFormField(
-                    initialValue: 'Cidade',
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.location_on),
-                      labelStyle: TextStyle(
-                        color: Color(0xFF6200EE),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 3, color: Color(0xFF6200EE)),
-                      ),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 3,
-                  child: TextFormField(
-                    initialValue: 'UF',
-                    decoration: const InputDecoration(
-                      labelStyle: TextStyle(
-                        color: Color(0xFF6200EE),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 3, color: Color(0xFF6200EE)),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: TextFormField(
-                    initialValue: 'Senha',
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.lock),
-                      labelStyle: TextStyle(
-                        color: Color(0xFF6200EE),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      initialValue: 'Cidade',
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Icons.location_on),
+                        labelStyle: TextStyle(
+                          color: Color(0xFF6200EE),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                        ),
                       ),
                     ),
                   ),
                 ),
                 Expanded(
-                  flex: 3,
-                  child: TextFormField(
-                    initialValue: 'Confirmar Senha',
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.lock),
-                      labelStyle: TextStyle(
-                        color: Color(0xFF6200EE),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      initialValue: 'UF',
+                      decoration: const InputDecoration(
+                        labelStyle: TextStyle(
+                          color: Color(0xFF6200EE),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                        ),
                       ),
                     ),
                   ),
@@ -176,33 +162,81 @@ class _TelaCadastroState extends State<TelaCadastro> {
             Row(
               children: [
                 Expanded(
-                  flex: 3,
-                  child: TextFormField(
-                    initialValue: 'Telefone',
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.phone),
-                      labelStyle: TextStyle(
-                        color: Color(0xFF6200EE),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      initialValue: 'Senha',
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Icons.lock),
+                        labelStyle: TextStyle(
+                          color: Color(0xFF6200EE),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                        ),
                       ),
                     ),
                   ),
                 ),
                 Expanded(
-                  flex: 3,
-                  child: TextFormField(
-                    initialValue: 'Celular',
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.phone_android),
-                      labelStyle: TextStyle(
-                        color: Color(0xFF6200EE),
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      initialValue: 'Confirmar Senha',
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Icons.lock),
+                        labelStyle: TextStyle(
+                          color: Color(0xFF6200EE),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                        ),
                       ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 3, color: Color(0xFF6200EE)),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      initialValue: 'Telefone',
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Icons.phone),
+                        labelStyle: TextStyle(
+                          color: Color(0xFF6200EE),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      initialValue: 'Celular',
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Icons.phone_android),
+                        labelStyle: TextStyle(
+                          color: Color(0xFF6200EE),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                        ),
                       ),
                     ),
                   ),
