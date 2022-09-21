@@ -35,14 +35,14 @@ class _TelaCadastroState extends State<TelaCadastro> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
-                initialValue: 'Nome',
                 decoration: const InputDecoration(
+                  labelText: 'Nome',
                   prefixIcon: Icon(Icons.person),
                   labelStyle: TextStyle(
                     color: Color(0xFF6200EE),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(width: 3, color: Color(0xFF6200EE)),
+                    borderSide: BorderSide(width: 2, color: Color(0xFF6200EE)),
                   ),
                 ),
               ),
@@ -50,15 +50,15 @@ class _TelaCadastroState extends State<TelaCadastro> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
-                initialValue: 'Sobrenome',
                 decoration: const InputDecoration(
+                  labelText: 'Sobrenome',
                   prefixIcon: Icon(Icons.person),
                   labelStyle: TextStyle(
                     color: Color(0xFF6200EE),
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderSide:
-                          BorderSide(width: 3, color: Color(0xFF6200EE))),
+                          BorderSide(width: 2, color: Color(0xFF6200EE))),
                 ),
               ),
             ),
@@ -69,15 +69,15 @@ class _TelaCadastroState extends State<TelaCadastro> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      initialValue: 'CPF',
                       decoration: const InputDecoration(
+                        labelText: 'CPF',
                         prefixIcon: Icon(Icons.person),
                         labelStyle: TextStyle(
                           color: Color(0xFF6200EE),
                         ),
                         enabledBorder: OutlineInputBorder(
                             borderSide:
-                                BorderSide(width: 3, color: Color(0xFF6200EE))),
+                                BorderSide(width: 2, color: Color(0xFF6200EE))),
                       ),
                     ),
                   ),
@@ -87,15 +87,15 @@ class _TelaCadastroState extends State<TelaCadastro> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      initialValue: 'Genero',
                       decoration: const InputDecoration(
+                        labelText: 'Genero',
                         prefixIcon: Icon(Icons.person),
                         labelStyle: TextStyle(
                           color: Color(0xFF6200EE),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide:
-                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                              BorderSide(width: 2, color: Color(0xFF6200EE)),
                         ),
                       ),
                     ),
@@ -106,14 +106,14 @@ class _TelaCadastroState extends State<TelaCadastro> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
-                initialValue: 'E-mail',
                 decoration: const InputDecoration(
+                  labelText: 'E-mail',
                   prefixIcon: Icon(Icons.email),
                   labelStyle: TextStyle(
                     color: Color(0xFF6200EE),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(width: 3, color: Color(0xFF6200EE)),
+                    borderSide: BorderSide(width: 2, color: Color(0xFF6200EE)),
                   ),
                 ),
               ),
@@ -125,15 +125,15 @@ class _TelaCadastroState extends State<TelaCadastro> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      initialValue: 'Cidade',
                       decoration: const InputDecoration(
+                        labelText: 'Cidade',
                         prefixIcon: Icon(Icons.location_on),
                         labelStyle: TextStyle(
                           color: Color(0xFF6200EE),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide:
-                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                              BorderSide(width: 2, color: Color(0xFF6200EE)),
                         ),
                       ),
                     ),
@@ -144,14 +144,14 @@ class _TelaCadastroState extends State<TelaCadastro> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      initialValue: 'UF',
                       decoration: const InputDecoration(
+                        labelText: 'UF',
                         labelStyle: TextStyle(
                           color: Color(0xFF6200EE),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide:
-                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                              BorderSide(width: 2, color: Color(0xFF6200EE)),
                         ),
                       ),
                     ),
@@ -166,15 +166,15 @@ class _TelaCadastroState extends State<TelaCadastro> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      initialValue: 'Senha',
                       decoration: const InputDecoration(
+                        labelText: 'Senha',
                         prefixIcon: Icon(Icons.lock),
                         labelStyle: TextStyle(
                           color: Color(0xFF6200EE),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide:
-                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                              BorderSide(width: 2, color: Color(0xFF6200EE)),
                         ),
                       ),
                     ),
@@ -185,15 +185,15 @@ class _TelaCadastroState extends State<TelaCadastro> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      initialValue: 'Confirmar Senha',
                       decoration: const InputDecoration(
+                        labelText: 'Confirmar Senha',
                         prefixIcon: Icon(Icons.lock),
                         labelStyle: TextStyle(
                           color: Color(0xFF6200EE),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide:
-                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                              BorderSide(width: 2, color: Color(0xFF6200EE)),
                         ),
                       ),
                     ),
@@ -208,15 +208,15 @@ class _TelaCadastroState extends State<TelaCadastro> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      initialValue: 'Telefone',
                       decoration: const InputDecoration(
+                        labelText: 'Telefone',
                         prefixIcon: Icon(Icons.phone),
                         labelStyle: TextStyle(
                           color: Color(0xFF6200EE),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide:
-                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                              BorderSide(width: 2, color: Color(0xFF6200EE)),
                         ),
                       ),
                     ),
@@ -227,15 +227,15 @@ class _TelaCadastroState extends State<TelaCadastro> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      initialValue: 'Celular',
                       decoration: const InputDecoration(
+                        labelText: 'Celular',
                         prefixIcon: Icon(Icons.phone_android),
                         labelStyle: TextStyle(
                           color: Color(0xFF6200EE),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide:
-                              BorderSide(width: 3, color: Color(0xFF6200EE)),
+                              BorderSide(width: 2, color: Color(0xFF6200EE)),
                         ),
                       ),
                     ),
@@ -254,7 +254,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                   },
                 ),
                 const Text(
-                  'Li e concordo com os Termos de uso e com as',
+                  'Li e concordo com os Termos de uso e com as ',
                   textAlign: TextAlign.center,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontWeight: FontWeight.bold),
