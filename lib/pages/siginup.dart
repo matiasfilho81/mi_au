@@ -22,10 +22,21 @@ class _TelaCadastroState extends State<TelaCadastro> {
   @override
   Widget build(BuildContext context) {
     var appBar2 = AppBar(
-      title: const Center(
-          child: Text("Cadastro", style: TextStyle(fontSize: 30.0))),
-      backgroundColor: const Color.fromARGB(255, 245, 198, 71),
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            "assets/images/logo.png",
+            fit: BoxFit.contain,
+            height: 50,
+          ),
+          const Center(
+              child: Text("Cadastro", style: TextStyle(fontSize: 40.0))),
+        ],
+      ),
+      backgroundColor: const Color(0xFFF6BC16),
     );
+
     return Scaffold(
       appBar: appBar2,
       body: Padding(
