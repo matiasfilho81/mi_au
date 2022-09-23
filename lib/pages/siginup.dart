@@ -180,6 +180,8 @@ class _TelaCadastroState extends State<TelaCadastro> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
+                        keyboardType: TextInputType.text,
+                        obscureText: true,
                         decoration: const InputDecoration(
                           labelText: 'Senha',
                           prefixIcon: Icon(Icons.lock),
@@ -199,6 +201,8 @@ class _TelaCadastroState extends State<TelaCadastro> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
+                        keyboardType: TextInputType.text,
+                        obscureText: true,
                         decoration: const InputDecoration(
                           labelText: 'Confirmar Senha',
                           prefixIcon: Icon(Icons.lock),
