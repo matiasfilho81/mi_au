@@ -13,11 +13,6 @@ class TelaCadastro extends StatefulWidget {
 class _TelaCadastroState extends State<TelaCadastro> {
   bool aceitotermos = false;
   bool leitor = true;
-  String dropdownvalue = 'Genero';
-  var items = [
-    'Masculino',
-    'Feminino',
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +97,6 @@ class _TelaCadastroState extends State<TelaCadastro> {
                       child: TextFormField(
                         decoration: const InputDecoration(
                           labelText: 'Genero',
-                          prefixIcon: Icon(Icons.person),
                           labelStyle: TextStyle(
                             color: Color(0xFF737682),
                           ),
@@ -135,7 +129,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
               Row(
                 children: [
                   Expanded(
-                    flex: 2,
+                    flex: 3,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
