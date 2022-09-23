@@ -41,267 +41,291 @@ class _TelaCadastroState extends State<TelaCadastro> {
       appBar: appBar2,
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  labelText: 'Nome',
-                  prefixIcon: Icon(Icons.person),
-                  labelStyle: TextStyle(
-                    color: Color(0xFF6200EE),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(width: 2, color: Color(0xFF6200EE)),
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  labelText: 'Sobrenome',
-                  prefixIcon: Icon(Icons.person),
-                  labelStyle: TextStyle(
-                    color: Color(0xFF6200EE),
-                  ),
-                  enabledBorder: OutlineInputBorder(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    labelText: 'Nome',
+                    prefixIcon: Icon(Icons.person),
+                    labelStyle: TextStyle(
+                      color: Color(0xFF737682),
+                    ),
+                    enabledBorder: OutlineInputBorder(
                       borderSide:
-                          BorderSide(width: 2, color: Color(0xFF6200EE))),
+                          BorderSide(width: 2, color: Color(0xFF3E90F1)),
+                    ),
+                  ),
                 ),
               ),
-            ),
-            Row(
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        labelText: 'CPF',
-                        prefixIcon: Icon(Icons.person),
-                        labelStyle: TextStyle(
-                          color: Color(0xFF6200EE),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    labelText: 'Sobrenome',
+                    prefixIcon: Icon(Icons.person),
+                    labelStyle: TextStyle(
+                      color: Color(0xFF737682),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(width: 2, color: Color(0xFF3E90F1))),
+                  ),
+                ),
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          labelText: 'CPF',
+                          prefixIcon: Icon(Icons.person),
+                          labelStyle: TextStyle(
+                            color: Color(0xFF737682),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  width: 2, color: Color(0xFF3E90F1))),
                         ),
-                        enabledBorder: OutlineInputBorder(
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          labelText: 'Genero',
+                          prefixIcon: Icon(Icons.person),
+                          labelStyle: TextStyle(
+                            color: Color(0xFF737682),
+                          ),
+                          enabledBorder: OutlineInputBorder(
                             borderSide:
-                                BorderSide(width: 2, color: Color(0xFF6200EE))),
-                      ),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        labelText: 'Genero',
-                        prefixIcon: Icon(Icons.person),
-                        labelStyle: TextStyle(
-                          color: Color(0xFF6200EE),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 2, color: Color(0xFF6200EE)),
+                                BorderSide(width: 2, color: Color(0xFF3E90F1)),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  labelText: 'E-mail',
-                  prefixIcon: Icon(Icons.email),
-                  labelStyle: TextStyle(
-                    color: Color(0xFF6200EE),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(width: 2, color: Color(0xFF6200EE)),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    labelText: 'E-mail',
+                    prefixIcon: Icon(Icons.email),
+                    labelStyle: TextStyle(
+                      color: Color(0xFF737682),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide:
+                          BorderSide(width: 2, color: Color(0xFF3E90F1)),
+                    ),
                   ),
                 ),
               ),
-            ),
-            Row(
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        labelText: 'Cidade',
-                        prefixIcon: Icon(Icons.location_on),
-                        labelStyle: TextStyle(
-                          color: Color(0xFF6200EE),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 2, color: Color(0xFF6200EE)),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        labelText: 'UF',
-                        labelStyle: TextStyle(
-                          color: Color(0xFF6200EE),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 2, color: Color(0xFF6200EE)),
+              Row(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          labelText: 'Cidade',
+                          prefixIcon: Icon(Icons.location_on),
+                          labelStyle: TextStyle(
+                            color: Color(0xFF737682),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(width: 2, color: Color(0xFF3E90F1)),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        labelText: 'Senha',
-                        prefixIcon: Icon(Icons.lock),
-                        labelStyle: TextStyle(
-                          color: Color(0xFF6200EE),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 2, color: Color(0xFF6200EE)),
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          labelText: 'UF',
+                          labelStyle: TextStyle(
+                            color: Color(0xFF737682),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(width: 2, color: Color(0xFF3E90F1)),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        labelText: 'Confirmar Senha',
-                        prefixIcon: Icon(Icons.lock),
-                        labelStyle: TextStyle(
-                          color: Color(0xFF6200EE),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 2, color: Color(0xFF6200EE)),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        labelText: 'Telefone',
-                        prefixIcon: Icon(Icons.phone),
-                        labelStyle: TextStyle(
-                          color: Color(0xFF6200EE),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 2, color: Color(0xFF6200EE)),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          labelText: 'Senha',
+                          prefixIcon: Icon(Icons.lock),
+                          labelStyle: TextStyle(
+                            color: Color(0xFF737682),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(width: 2, color: Color(0xFF3E90F1)),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        labelText: 'Celular',
-                        prefixIcon: Icon(Icons.phone_android),
-                        labelStyle: TextStyle(
-                          color: Color(0xFF6200EE),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 2, color: Color(0xFF6200EE)),
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          labelText: 'Confirmar Senha',
+                          prefixIcon: Icon(Icons.lock),
+                          labelStyle: TextStyle(
+                            color: Color(0xFF737682),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(width: 2, color: Color(0xFF3E90F1)),
+                          ),
                         ),
                       ),
                     ),
                   ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          labelText: 'Telefone',
+                          prefixIcon: Icon(Icons.phone),
+                          labelStyle: TextStyle(
+                            color: Color(0xFF737682),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(width: 2, color: Color(0xFF3E90F1)),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          labelText: 'Celular',
+                          prefixIcon: Icon(Icons.phone_android),
+                          labelStyle: TextStyle(
+                            color: Color(0xFF737682),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(width: 2, color: Color(0xFF3E90F1)),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Checkbox(
+                    value: aceitotermos,
+                    onChanged: (checked) {
+                      setState(() {
+                        aceitotermos = !aceitotermos;
+                      });
+                    },
+                  ),
+                  const Text(
+                    'Li e concordo com os Termos de uso e com as ',
+                    textAlign: TextAlign.center,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Política de privacidade',
+                    textAlign: TextAlign.center,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Switch(
+                    value: leitor,
+                    onChanged: (bool s) {
+                      setState(() {
+                        leitor = s;
+                        print(leitor);
+                      });
+                    },
+                  ),
+                  const Text(
+                    'Leitor Digital',
+                    textAlign: TextAlign.center,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              Column(
+                children: const [
+                  Divider(
+                    color: (Colors.black),
+                    indent: 30,
+                    endIndent: 40,
+                    height: 20,
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.all(.0),
+                child: Button(
+                  label: "Entrar",
+                  onPressed: () =>
+                      debugPrint("Olá sou um botao e faço uma ação!"),
                 ),
-              ],
-            ),
-            Row(
-              children: [
-                Checkbox(
-                  value: aceitotermos,
-                  onChanged: (checked) {
-                    setState(() {
-                      aceitotermos = !aceitotermos;
-                    });
-                  },
-                ),
-                const Text(
-                  'Li e concordo com os Termos de uso e com as ',
-                  textAlign: TextAlign.center,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            const Text(
-              'Política de privacidade',
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            Row(
-              children: [
-                Switch(
-                  value: leitor,
-                  onChanged: (bool s) {
-                    setState(() {
-                      leitor = s;
-                      print(leitor);
-                    });
-                  },
-                ),
-                const Text(
-                  'Leitor Digital',
-                  textAlign: TextAlign.center,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                )
-              ],
-            ),
-            Button(
-              label: "Entrar",
-              onPressed: () => debugPrint("Olá sou um botao e faço uma ação!"),
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );
