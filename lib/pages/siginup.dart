@@ -77,6 +77,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
+                        keyboardType: TextInputType.number,
                         decoration: const InputDecoration(
                           labelText: 'CPF',
                           prefixIcon: Icon(Icons.person),
@@ -220,6 +221,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
+                        keyboardType: TextInputType.number,
                         decoration: const InputDecoration(
                           labelText: 'Telefone',
                           prefixIcon: Icon(Icons.phone),
@@ -239,6 +241,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
+                        keyboardType: TextInputType.number,
                         decoration: const InputDecoration(
                           labelText: 'Celular',
                           prefixIcon: Icon(Icons.phone_android),
