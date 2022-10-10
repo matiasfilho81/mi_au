@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:mi_au/pages/whatsapp.dart';
+import 'package:mi_au/pages/home.dart';
 
 import 'utils/app_responsive/app_responsive_widget.dart';
 
@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
         systemNavigationBarColor: Colors.transparent, // navigation bar color
         statusBarColor: Colors.transparent, // status bar color
         statusBarIconBrightness: Brightness.dark, // status bar icons' color
-        systemNavigationBarIconBrightness: Brightness.dark, //navigation bar icons' color
+        systemNavigationBarIconBrightness:
+            Brightness.dark, //navigation bar icons' color
       ),
     );
     return MaterialApp.router(
@@ -27,7 +28,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       builder: (context, child) {
-        return const AppResponsiveWidget(child: WhatsAppButton());
+        return const AppResponsiveWidget(
+            child: MyHomePage(
+          title: '',
+        ));
       },
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
