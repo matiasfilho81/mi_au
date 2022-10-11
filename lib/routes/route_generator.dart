@@ -1,32 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:mi_au/pages/login.dart';
 
 import '../pages/home.dart';
 
 class RouteGenerator {
-  static Route<dynamic> ?generateRoute(RouteSettings settings) {
+  static Route<dynamic>? generateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case 'login':
+        return MaterialPageRoute(builder: (_) => const LoginPage());
+      case 'signup':
+      //return MaterialPageRoute(builder: (_) => SignupPage());
+      case 'menu':
+      //return MaterialPageRoute(builder: (_) => MenuPage());
+      case 'home':
+        return MaterialPageRoute(
+            builder: (_) => const MyHomePage(
+                  title: '',
+                ));
 
-    switch(settings.name) {
-      case 'Login':
-        //return MaterialPageRoute(builder: (_) => LoginPage());
-      case 'Signup':
-        //return MaterialPageRoute(builder: (_) => SignupPage());
-      case 'Menu':
-        //return MaterialPageRoute(builder: (_) => MenuPage());
-      case 'Home':
-        return MaterialPageRoute(builder: (_) => const MyHomePage(title: '',));
-
-      default: _erroRoute();
+      default:
+        _erroRoute();
     }
     return null;
   }
-  
+
   static Route<dynamic> _erroRoute() {
-    return MaterialPageRoute(builder: (_){
-      return Scaffold(
-        appBar: AppBar(
-          title: const Center(child: Text('Erro')),
-        ),
-      );
-    });
+    return MaterialPageRoute(
+      builder: (_) {
+        return Scaffold(
+          appBar: AppBar(
+            title: const Center(child: Text('Erro')),
+          ),
+        );
+      },
+    );
   }
+}
+
+class RoutePaths {
+  static const home = '/';
+  static const login = 'login';
+  static const signup = 'signup';
 }
