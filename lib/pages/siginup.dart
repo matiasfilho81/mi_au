@@ -1,6 +1,8 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:mi_au/core/themes/app_colors.dart';
+import 'package:mi_au/utils/app_responsive/app_responsive_ext.dart';
 import '../core/themes/ui/buttons/button_icon.dart';
 
 class TelaCadastro extends StatefulWidget {
@@ -29,13 +31,13 @@ class _TelaCadastroState extends State<TelaCadastro> {
               child: Text("Cadastro", style: TextStyle(fontSize: 40.0))),
         ],
       ),
-      backgroundColor: const Color(0xFFF6BC16),
+      backgroundColor: AppColors.colorOrangePrimary_400,
     );
 
     return Scaffold(
       appBar: appBar2,
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0.hsp),
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
